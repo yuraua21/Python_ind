@@ -4,7 +4,7 @@ import re
 
 bot = telebot.TeleBot('5310625340:AAEttM2dxt4DVQDUWCFYZhtIhBbG0OPrCIE')
 
-wikipedia.set_lang("en")
+wikipedia.set_lang("uk")
 
 def getwiki(s):
     try:
@@ -37,7 +37,7 @@ def getwiki(s):
 
 @bot.message_handler(commands=["start"])
 def start(m, res=False):
-    bot.send_message(m.chat.id, 'Отправьте мне любое слово, и я найду его значение на Wikipedia')
+    bot.send_message(m.chat.id, 'Відправте мені любе слово, і я знайду його значення у Wikipedia')
 
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
